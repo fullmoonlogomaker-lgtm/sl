@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YLS Thanksgiving</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f3e2c7; /* cor quente thanksgiving */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .logo {
+      width: 200px;
+      margin-bottom: 20px;
+    }
+
+    .button {
+      background: #b04a1f; /* marrom avermelhado thanksgiving */
+      color: #fff;
+      padding: 40px 60px;
+      font-size: 3rem;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      box-shadow: 0px 8px 20px rgba(0,0,0,0.3);
+      transition: transform 0.15s ease;
+    }
+
+    .button:hover {
+      transform: scale(1.05);
+    }
+
+    .modal-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      display: none;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal {
+      background: #fff8ef;
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 400px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      font-size: 1.3rem;
+    }
+
+    .close {
+      margin-top: 20px;
+      background: #b04a1f;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <img src="/mnt/data/image-removebg-preview.png" alt="YLS Logo" class="logo" />
+
+  <button class="button" onclick="openModal()">CLIQUE AQUI</button>
+
+  <div class="modal-bg" id="modal-bg">
+    <div class="modal">
+      <h2>🍂 Convite de Thanksgiving 🍁</h2>
+      <p><strong>Data:</strong> 28/11</p>
+      <p><strong>Horário:</strong> 20:00</p>
+      <p><strong>Local:</strong> YLS</p>
+      <p>Traga algo para comer e beber! 🥧🍷</p>
+      <button class="close" onclick="closeModal()">Fechar</button>
+    </div>
+  </div>
+
+  <script>
+    function openModal() {
+      document.getElementById('modal-bg').style.display = 'flex';
+    }
+    function closeModal() {
+      document.getElementById('modal-bg').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
